@@ -32,8 +32,9 @@ export default defineConfig(({ command }) => {
             ...commonConfig,
             build: {
                 emptyOutDir: true,
+                minify:'esbuild',
                 outDir: `${process.cwd()}/dist`,
-                sourcemap: true,
+                sourcemap: !process.argv.includes('--deploy'),
                 license: true,
             },
         };

@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "bunx --bun vite --config config/vite.config.js",
-    "build": "bun run test && vite build --mode production --config config/vite.config.js",
+    "build": "vite build --mode production --config config/vite.config.js",
+    "deploy": "bun run test && vite build --mode production --config config/vite.config.js -- --deploy",
     "lint": "time eslint --stats --cache --concurrency auto -c ./config/.eslintrc.js src/**/*.ts tests/**/*.test.ts",
     "unit": "bun test",
     "test": "bun run lint && bun run unit"
