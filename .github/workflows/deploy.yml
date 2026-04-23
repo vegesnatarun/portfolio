@@ -32,7 +32,7 @@ jobs:
         aws-region: ap-south-1
 
     - name: Deploy to S3
-      run: aws s3 cp --recursive ./dist s3.ap-south-1.amazonaws.com/vegesnatarun.com/v1/
+      run: aws s3 cp --recursive ./dist s3://vegesnatarun.com/v1/
 
     - name: Invalidate CloudFront
       run: aws cloudfront create-invalidation --distribution-id E1R77LZ7H0HTMN --paths "/*"
