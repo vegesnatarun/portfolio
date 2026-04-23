@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "esnext",
+        "target": "esnext",
+        "moduleResolution": "bundler",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "jsx": "preserve",
+        "jsxImportSource": "solid-js",
+        "strict": true,
+        "noEmit": true
+    },
+    "include": [
+        "./src",
+        "./tests"
+    ],
+    "exclude": [
+        "./node_modules",
+        "./dist"
+    ]
+}
